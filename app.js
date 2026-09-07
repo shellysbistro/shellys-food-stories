@@ -4,6 +4,7 @@ const stories = [
     title: "Oats & Oatmeal",
     kicker: "From Prairie field to breakfast bowl",
     icon: "🥣",
+    character: { name: "Oatie", speech: "Tiny oat seeds become a warm bowl after farmers grow, harvest and roll them.", sheet: "food-friends.png", x: 0, y: 0 },
     region: "Canadian Prairies",
     connection: "Agriculture story",
     confidence: "High",
@@ -27,6 +28,7 @@ const stories = [
     title: "Fruit & Vegetables",
     kicker: "Orchards, fields, vines and greenhouses",
     icon: "🍎",
+    character: { name: "The Garden Crew", speech: "We grow on trees, vines, in fields and greenhouses. Can you spot which plant part you are eating?", sheet: "food-friends.png", x: 3, y: 1 },
     region: "Many growing regions",
     connection: "Food-system story",
     confidence: "High",
@@ -50,6 +52,7 @@ const stories = [
     title: "Bannock & Indigenous Foodways",
     kicker: "A living Indigenous food story",
     icon: "🫓",
+    character: { name: "Bibi Bannock", speech: "My flour story includes trade, adaptation and living First Nations and Métis foodways.", sheet: "food-friends.png", x: 1, y: 0 },
     region: "Indigenous Canada",
     connection: "First Nations & Métis foodways",
     confidence: "Nuanced",
@@ -73,6 +76,7 @@ const stories = [
     title: "Pancakes & Waffles",
     kicker: "A cooking idea shared around the world",
     icon: "🥞",
+    character: { name: "Pippa Pancake", speech: "Cooks around the world turn many kinds of grain batter into warm, flat cakes.", sheet: "story-friends-2.png", x: 0, y: 0 },
     region: "Many cultures",
     connection: "Global food tradition",
     confidence: "High",
@@ -96,6 +100,7 @@ const stories = [
     title: "French Toast",
     kicker: "More than a French name",
     icon: "🍞",
+    character: { name: "Toasty", speech: "Long ago, cooks rescued older bread by soaking it before cooking: less waste, a new meal!", sheet: "story-friends-2.png", x: 1, y: 0 },
     region: "Europe across centuries",
     connection: "Food-use and history story",
     confidence: "High",
@@ -119,6 +124,7 @@ const stories = [
     title: "The Breakfast Sandwich",
     kicker: "Portable food, changing forms",
     icon: "🥪",
+    character: { name: "Sunny Sandwich", speech: "Change my bread or filling and my food journey changes too.", sheet: "story-friends-2.png", x: 2, y: 0 },
     region: "Britain → North America",
     connection: "Migration and adaptation",
     confidence: "Supported",
@@ -142,6 +148,7 @@ const stories = [
     title: "Eggs & Frittata",
     kicker: "An Italian egg-dish connection",
     icon: "🍳",
+    character: { name: "Frankie Frittata", speech: "Eggs can hold a whole garden of colourful vegetables together.", sheet: "food-friends.png", x: 2, y: 1 },
     region: "Italy",
     connection: "Italian food tradition",
     confidence: "High",
@@ -165,6 +172,7 @@ const stories = [
     title: "Sandwiches, Wraps & Lunch Favourites",
     kicker: "Contemporary meals with many ingredient stories",
     icon: "🌯",
+    character: { name: "Willa Wrap", speech: "Open my layers and you will find that every ingredient has its own journey.", sheet: "story-friends-2.png", x: 3, y: 0 },
     region: "Contemporary North America",
     connection: "Multiple influences",
     confidence: "High",
@@ -188,6 +196,7 @@ const stories = [
     title: "Caesar Salad",
     kicker: "Italy + Mexico + North America",
     icon: "🥗",
+    character: { name: "Cee-Cee Caesar", speech: "My story begins in 1920s Tijuana, not ancient Rome!", sheet: "food-friends.png", x: 3, y: 0 },
     region: "Tijuana, Mexico",
     connection: "Migration story",
     confidence: "Strongly supported",
@@ -211,6 +220,7 @@ const stories = [
     title: "Soups & Stews",
     kicker: "One pot, thousands of food stories",
     icon: "🥘",
+    character: { name: "Stewie", speech: "One pot can bring many small ingredients together into a warm, shared meal.", sheet: "story-friends-2.png", x: 0, y: 1 },
     region: "Around the world",
     connection: "Shared cooking idea",
     confidence: "High",
@@ -234,6 +244,7 @@ const stories = [
     title: "The Potato Story",
     kicker: "From seed potato to school kitchen",
     icon: "🥔",
+    character: { name: "Spud", speech: "I grow underground on a special stem called a tuber.", sheet: "story-friends-2.png", x: 1, y: 1 },
     region: "Manitoba farm connection",
     connection: "Agriculture story",
     confidence: "High",
@@ -257,6 +268,7 @@ const stories = [
     title: "Poutine",
     kicker: "A Québec food story",
     icon: "🍟",
+    character: { name: "Tina Poutine", speech: "My Québec roots are clear, but several communities remember my beginning differently.", sheet: "food-friends.png", x: 2, y: 0 },
     region: "Québec, Canada",
     connection: "Québécois food culture",
     confidence: "Debated",
@@ -280,6 +292,7 @@ const stories = [
     title: "The Modern Burger",
     kicker: "A debated invention story",
     icon: "🍔",
+    character: { name: "Bertie Burger", speech: "Many inventors claimed me, so historians compare clues instead of choosing too quickly.", sheet: "story-friends-2.png", x: 2, y: 1 },
     region: "Europe → United States",
     connection: "North American evolution",
     confidence: "Debated",
@@ -303,6 +316,7 @@ const stories = [
     title: "Pasta Across Cultures",
     kicker: "Shapes, sauces and changing recipes",
     icon: "🍝",
+    character: { name: "Twirly", speech: "Shape, sauce and migration helped pasta stories change as they travelled.", sheet: "story-friends-2.png", x: 3, y: 1 },
     region: "Italy → North America",
     connection: "Migration and adaptation",
     confidence: "Supported",
@@ -326,6 +340,7 @@ const stories = [
     title: "Alfredo & Chicken Parmesan",
     kicker: "When recipes migrate",
     icon: "🧀",
+    character: { name: "Alfie Alfredo", speech: "My early Roman version was pasta, butter and Parmesan. Recipes changed when I travelled.", sheet: "food-friends.png", x: 1, y: 1 },
     region: "Italy → North America",
     connection: "Italian and Italian-American stories",
     confidence: "Strongly supported",
@@ -349,6 +364,7 @@ const stories = [
     title: "The Taco Journey",
     kicker: "From Mexican traditions to a school bowl",
     icon: "🌮",
+    character: { name: "Taco Tia", speech: "My flavours connect to Mexican taco traditions, while my bowl is a modern adaptation.", sheet: "food-friends.png", x: 0, y: 1 },
     region: "Mexico → North America",
     connection: "Contemporary adaptation",
     confidence: "Nuanced",
@@ -667,13 +683,21 @@ function gradeLabel(grade) {
   return grade === 1 ? "K–3" : grade === 2 ? "Grades 4–6" : "Grades 7–12";
 }
 
+function characterPortrait(story, className = "story-character") {
+  const xPositions = [0, 33.333, 66.667, 100];
+  const x = xPositions[story.character.x] ?? 0;
+  const y = story.character.y === 1 ? 100 : 0;
+  const style = `--character-image:url('assets/${story.character.sheet}');--character-x:${x}%;--character-y:${y}%`;
+  return `<span class="${className}" role="img" aria-label="${escapeHtml(story.character.name)}, ${escapeHtml(story.title)} storybook character" style="${style}"></span>`;
+}
+
 function renderFeaturedStories() {
   const featured = [storyById.get("bannock"), storyById.get("poutine"), storyById.get("caesar")];
   document.querySelector("#featured-stories").innerHTML = featured.map((story) => `
     <button class="featured-story" data-story-id="${story.id}" aria-label="Open ${escapeHtml(story.title)} food story">
       <span class="featured-arrow" aria-hidden="true">↗</span>
       <span class="featured-story-content">
-        <span class="featured-icon" aria-hidden="true">${story.icon}</span>
+        ${characterPortrait(story, "featured-character")}
         <span class="featured-tag">${escapeHtml(story.region)}</span>
         <h3>${escapeHtml(story.title)}</h3>
         <p>${escapeHtml(story.kicker)}</p>
@@ -692,6 +716,13 @@ function renderStories() {
 
   document.querySelector("#story-grid").innerHTML = filtered.map((story) => `
     <button class="story-card" data-story-id="${story.id}" style="--card-accent:${story.colour}" aria-label="Open ${escapeHtml(story.title)} food story">
+      <span class="story-card-scene">
+        ${characterPortrait(story)}
+        <span class="story-card-bubble">
+          <strong>${escapeHtml(story.character.name)} says…</strong>
+          <span>“${escapeHtml(story.character.speech)}”</span>
+        </span>
+      </span>
       <span class="story-card-top">
         <span class="story-card-icon" aria-hidden="true">${story.icon}</span>
         <span class="story-card-region"><span>Connection</span><strong>${escapeHtml(story.region)}</strong></span>
@@ -727,6 +758,14 @@ function openStory(id) {
         <p>${escapeHtml(story.kicker)}</p>
       </div>
       <div class="drawer-body">
+        <section class="drawer-storybook" aria-label="A clue from ${escapeHtml(story.character.name)}">
+          ${characterPortrait(story, "drawer-character")}
+          <div class="drawer-speech">
+            <span>Story guide</span>
+            <h3>${escapeHtml(story.character.name)}</h3>
+            <p>“${escapeHtml(story.character.speech)}”</p>
+          </div>
+        </section>
         <div class="drawer-meta">
           <div><span>Connection</span><strong>${escapeHtml(story.connection)}</strong></div>
           <div><span>Origin confidence</span><strong>${escapeHtml(story.confidence)}</strong></div>

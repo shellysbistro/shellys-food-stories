@@ -13,7 +13,8 @@ No package installation or build step is required.
 - 45-item source menu inventory
 - 16 grouped food stories
 - Six source-linked, interactive food-history comic chapters
-- Original food-character and four-panel history illustrations
+- A named storybook food character and speech-bubble clue for every one of the 16 story groups
+- Original food-character cast sheets and four-panel history illustrations
 - Clue challenges, story stamps and saved passport progress
 - K–3, Grades 4–6 and Grades 7–12 reading levels
 - Search and cultural/geographic filters
@@ -32,4 +33,4 @@ The comic chapters currently link to source material from Parks Canada, the Loui
 
 ## Brand note
 
-The visual system is provisional. It uses a warm, botanical-inspired school-food direction without redrawing or imitating an unsupplied Shelly's logo. The food imagery is original educational illustration and is explicitly labelled as such in the interface. Replace or supplement it with real Shelly's food photography when approved photography is available.
+The supplied Shelly's Bistro logo is used exactly as provided in the interface and favicon. The surrounding visual system uses a warm, botanical-inspired school-food direction. Food imagery is original educational illustration and is explicitly labelled as such in the interface; supplement it with real Shelly's food photography when approved photography is available.
