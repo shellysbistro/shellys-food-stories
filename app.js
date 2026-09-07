@@ -456,7 +456,7 @@ function buildTrace(type, ingredient) {
   const traces = {
     grain: [["🌱", "Plant", ingredient + " begins as seed in soil"], ["☀️", "Grow", "A field crop ripens"], ["⚙️", "Mill", "Grain is cleaned and milled or rolled"], ["👩🏽‍🍳", "Prepare", "Shelly's kitchen follows the recipe"], ["🏫", "Plate", "The meal is served at school"]],
     produce: [["🌱", "Plant", ingredient + " begins as seed or young plant"], ["☀️", "Grow", "Field, orchard, vine or greenhouse"], ["🧺", "Harvest", "Picked, cooled and packed"], ["👩🏽‍🍳", "Prepare", "Washed, cut or cooked in the kitchen"], ["🏫", "Plate", "The meal is served at school"]],
-    potato: [["🥔", "Plant", "A seed potato is planted"], ["🌿", "Grow", "New tubers form underground"], ["🚜", "Harvest", "Potatoes are lifted and stored"], ["👩🏽‍🍳", "Prepare", ingredient + " is cut and cooked"], ["🏫", "Plate", "The meal is served at school"]],
+    potato: [["🥔", "Plant", "A seed potato is planted"], ["🌿", "Grow", "New tubers form underground"], ["🚜", "Harvest", "Potatoes are lifted and stored"], ["👩🏽‍🍳", "Prepare", "Potatoes are cut and cooked"], ["🏫", "Plate", "The meal is served at school"]],
     egg: [["🐔", "Farm", "Laying hens are cared for"], ["🥚", "Collect", "Eggs are collected and graded"], ["🚚", "Deliver", "Packed eggs move through a cold chain"], ["👩🏽‍🍳", "Cook", ingredient + " is prepared safely"], ["🏫", "Plate", "The meal is served at school"]],
     poultry: [["🐣", "Farm", "Birds are hatched and raised"], ["🌾", "Raise", "Farmers provide feed, water and care"], ["🏭", "Process", "Poultry is inspected, packed and lot-coded"], ["👩🏽‍🍳", "Cook", ingredient + " is cooked safely"], ["🏫", "Plate", "The meal is served at school"]],
     beef: [["🐄", "Farm", "Cattle begin on a farm or ranch"], ["🌾", "Raise", "Animals receive feed, water and care"], ["🏭", "Process", "Beef is inspected, packed and lot-coded"], ["👩🏽‍🍳", "Cook", ingredient + " is cooked safely"], ["🏫", "Plate", "The meal is served at school"]],
@@ -907,10 +907,6 @@ function openStory(id) {
         <section class="drawer-section">
           <h3>Food story</h3>
           <p>${escapeHtml(story.grade[currentGrade])}</p>
-        </section>
-        <section class="drawer-section shellys-version">
-          <h3>Shelly's school-menu version</h3>
-          <p>${escapeHtml(story.shellys)}</p>
         </section>
         <section class="drawer-section">
           <h3>Main ingredients</h3>
