@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shelly's Food Stories — an interactive school food-literacy dashboard for food, culture, land and community."
+    />
+    <meta name="theme-color" content="#173f35" />
+    <title>Shelly's Food Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Shelly's Food Stories home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" role="img">
+            <path d="M22 5c2.3 5.8 1.2 10.2-3.3 13.1C13 17.2 9 14.7 7 10.5c6.4-.6 11.4 1.2 15 5.5" />
+            <path d="M22 5c-2.3 5.8-1.2 10.2 3.3 13.1C31 17.2 35 14.7 37 10.5c-6.4-.6-11.4 1.2-15 5.5" />
+            <path d="M22 39c-1-9.5-.4-16.5 0-23" />
+            <path d="M21 29c-5.8-4-10.5-3.7-14.2.8 5.5 2.9 10.4 2.3 14.7-1.8" />
+            <path d="M23 24c5.4-3.8 9.8-3.4 13.4.7-5.1 2.7-9.7 2.2-13.8-1.6" />
+          </svg>
+        </span>
+        <span>
+          <strong>Shelly's</strong>
+          <small>Food Stories</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="home">Overview</button>
+        <button class="nav-link" data-view="stories">Food stories</button>
+        <button class="nav-link" data-view="comics">Story comics</button>
+        <button class="nav-link" data-view="journeys">Farm to school</button>
+        <button class="nav-link" data-view="teachers">Teacher toolkit</button>
+        <button class="nav-link" data-view="plan">Program plan</button>
+      </nav>
+
+      <button class="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <button class="nav-link active" data-view="home">Overview</button>
+      <button class="nav-link" data-view="stories">Food stories</button>
+      <button class="nav-link" data-view="comics">Story comics</button>
+      <button class="nav-link" data-view="journeys">Farm to school</button>
+      <button class="nav-link" data-view="teachers">Teacher toolkit</button>
+      <button class="nav-link" data-view="plan">Program plan</button>
+    </div>
+
+    <main id="main">
+      <section class="view active" id="view-home" data-view-panel="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> St. James-Assiniboia school program</p>
+            <h1>Every meal<br /><em>has a story.</em></h1>
+            <p class="hero-lede">
+              Explore how food connects land, people, agriculture, history, migration,
+              culture, family and community — all the way to today's plate.
+            </p>
+            <div class="hero-actions">
+              <button class="button button-primary" data-go="stories">
+                Explore the food library
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+              </button>
+              <button class="button button-quiet" id="random-story-button">
+                Surprise me
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h2.5c5 0 4 8 9 8H17M14 3l3 3-3 3M3 14h2.5c1.6 0 2.6-.8 3.4-1.9M14 11l3 3-3 3" /></svg>
+              </button>
+            </div>
+            <div class="hero-stats" aria-label="Program at a glance">
+              <div><strong>45</strong><span>menu listings</span></div>
+              <div><strong>16</strong><span>food stories</span></div>
+              <div><strong>13</strong><span>ingredient journeys</span></div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-label="Illustrated plate showing the journey from ingredients to lunch">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <span class="art-label label-land">Land</span>
+            <span class="art-label label-people">People</span>
+            <span class="art-label label-culture">Culture</span>
+            <svg class="plate-illustration" viewBox="0 0 640 640" role="img" aria-label="A colourful school meal plate with grains and vegetables">
+              <defs>
+                <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#173f35" flood-opacity=".18" />
+                </filter>
+              </defs>
+              <circle cx="320" cy="320" r="235" fill="#fffaf0" filter="url(#shadow)" />
+              <circle cx="320" cy="320" r="198" fill="#f3e6ca" stroke="#fffaf0" stroke-width="10" />
+              <path d="M160 300c18-88 74-145 158-161 45 43 64 94 57 154-70 33-142 35-215 7Z" fill="#e8a43e" />
+              <path d="M378 143c79 23 129 76 147 158-42 29-90 42-144 37 4-77 3-133-3-195Z" fill="#d65e49" />
+              <path d="M171 318c67 21 133 25 199 10 22 55 22 109 1 161-86 16-153-10-199-78-19-29-19-60-1-93Z" fill="#6f9f67" />
+              <path d="M387 351c48 6 92-6 133-36 7 76-24 133-94 172-25 14-34 8-49 2 14-49 17-95 10-138Z" fill="#b84c64" />
+              <g fill="#f9e7b3">
+                <ellipse cx="247" cy="213" rx="28" ry="10" transform="rotate(-20 247 213)" />
+                <ellipse cx="302" cy="188" rx="25" ry="9" transform="rotate(18 302 188)" />
+                <ellipse cx="210" cy="257" rx="23" ry="8" transform="rotate(12 210 257)" />
+              </g>
+              <g fill="none" stroke="#f4cbbd" stroke-width="9" stroke-linecap="round">
+                <path d="M421 201c24 14 41 31 54 53" />
+                <path d="M407 232c24 13 39 28 52 50" />
+                <path d="M436 176c20 12 35 26 48 44" />
+              </g>
+              <g fill="#cde2b0">
+                <circle cx="235" cy="371" r="23" />
+                <circle cx="284" cy="398" r="28" />
+                <circle cx="328" cy="360" r="21" />
+                <circle cx="221" cy="423" r="18" />
+                <circle cx="336" cy="438" r="19" />
+              </g>
+              <g fill="#f4c25a">
+                <circle cx="435" cy="391" r="18" />
+                <circle cx="473" cy="421" r="22" />
+                <circle cx="426" cy="448" r="15" />
+              </g>
+              <path d="M105 494c38-19 72-14 99 15-34 23-69 23-104 2" fill="none" stroke="#173f35" stroke-width="4" />
+              <path d="M507 102c-8 34-28 57-60 69-8-37 11-64 54-79" fill="none" stroke="#173f35" stroke-width="4" />
+            </svg>
+            <div class="plate-caption">
+              <span>From land</span>
+              <svg viewBox="0 0 36 12" aria-hidden="true"><path d="M1 6h32M28 1l5 5-5 5" /></svg>
+              <span>to lunch</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="lunch-bunch section-wrap" aria-labelledby="lunch-bunch-title">
+          <div class="lunch-bunch-copy">
+            <p class="kicker kicker-light">New for curious kids</p>
+            <h2 id="lunch-bunch-title">Meet the Lunch Bunch!</h2>
+            <p>These illustrated food friends pop up in comics, quizzes and story missions. They represent food ideas — not Shelly's exact recipes or portions.</p>
+            <button class="button button-sun" data-go="comics">Jump into the time machine <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="lunch-bunch-image">
+            <img src="assets/food-friends.png" alt="Illustrated oatmeal, bannock, poutine, Caesar salad, taco bowl, Alfredo, frittata and fruit characters" />
+          </div>
+          <span class="spark spark-one" aria-hidden="true">✦</span>
+          <span class="spark spark-two" aria-hidden="true">✺</span>
+        </section>
+
+        <section class="home-featured section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Start with today's lunch</p>
+              <h2>Featured food stories</h2>
+            </div>
+            <button class="text-link" data-go="stories">See all 16 stories <span>→</span></button>
+          </div>
+          <div class="featured-grid" id="featured-stories"></div>
+        </section>
+
+        <section class="story-path-section">
+          <div class="section-wrap story-path-wrap">
+            <div class="path-copy">
+              <p class="kicker kicker-light">The food-story lens</p>
+              <h2>Lunch is the last stop in a much bigger journey.</h2>
+              <p>
+                Each story begins with ingredients and moves through places, people and
+                kitchens. Students learn to see the whole system, not just a country label.
+              </p>
+            </div>
+            <div class="story-path" aria-label="Land to plate journey">
+              <div class="path-step"><span>01</span><strong>Land</strong><small>Where ingredients begin</small></div>
+              <div class="path-line"></div>
+              <div class="path-step"><span>02</span><strong>People</strong><small>Who grows and prepares food</small></div>
+              <div class="path-line"></div>
+              <div class="path-step"><span>03</span><strong>Culture</strong><small>How recipes carry stories</small></div>
+              <div class="path-line"></div>
+              <div class="path-step"><span>04</span><strong>Plate</strong><small>What students eat today</small></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-wrap home-teacher-callout">
+          <div class="callout-illustration" aria-hidden="true">
+            <span class="leaf leaf-a"></span><span class="leaf leaf-b"></span>
+            <div class="question-card-mini">
+              <span>❓ THINK ABOUT IT</span>
+              <strong>Which ingredients started on a farm?</strong>
+            </div>
+          </div>
+          <div>
+            <p class="kicker">Made for real classrooms</p>
+            <h2>Turn lunch into a two-minute lesson.</h2>
+            <p>
+              Choose a meal and reading level. Get one question for before eating, one
+              sensory prompt for while eating and one food-system question for after.
+            </p>
+            <button class="button button-primary" data-go="teachers">Open the teacher toolkit</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-stories" data-view-panel="stories" hidden>
+        <div class="page-intro section-wrap">
+          <p class="eyebrow"><span></span> Explore the menu</p>
+          <div class="page-intro-row">
+            <div>
+              <h1>Food story library</h1>
+              <p>Sixteen careful stories cover every one of Shelly's 45 menu listings.</p>
+            </div>
+            <div class="grade-switch" role="group" aria-label="Student reading level">
+              <span>Reading level</span>
+              <button data-grade="1">K–3</button>
+              <button class="active" data-grade="2">4–6</button>
+              <button data-grade="3">7–12</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="library-tools section-wrap">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 5 5" /></svg>
+            <span class="sr-only">Search food stories</span>
+            <input id="story-search" type="search" placeholder="Search a dish, place or ingredient…" />
+          </label>
+          <div class="filter-row" id="story-filters" aria-label="Filter food stories">
+            <button class="filter-chip active" data-filter="all">All stories <span>16</span></button>
+            <button class="filter-chip" data-filter="indigenous">Indigenous story</button>
+            <button class="filter-chip" data-filter="canada">Canada</button>
+            <button class="filter-chip" data-filter="world">Around the world</button>
+            <button class="filter-chip" data-filter="farm">Farm to plate</button>
+          </div>
+        </div>
+
+        <div class="story-grid section-wrap" id="story-grid"></div>
+        <div class="empty-state section-wrap" id="story-empty" hidden>
+          <span>🌱</span>
+          <h2>No stories found</h2>
+          <p>Try another dish, ingredient or filter.</p>
+        </div>
+
+        <section class="inventory-section section-wrap">
+          <div class="section-heading inventory-heading">
+            <div>
+              <p class="kicker">Source-of-truth inventory</p>
+              <h2>All 45 menu listings</h2>
+            </div>
+            <button class="button button-outline" id="inventory-toggle" aria-expanded="false" aria-controls="inventory-panel">
+              View full inventory <span>+</span>
+            </button>
+          </div>
+          <div class="inventory-panel" id="inventory-panel" hidden>
+            <div class="inventory-controls">
+              <label class="search-box compact">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m16 16 5 5" /></svg>
+                <span class="sr-only">Search menu inventory</span>
+                <input id="menu-search" type="search" placeholder="Find a menu item…" />
+              </label>
+              <label class="select-wrap">
+                <span class="sr-only">Filter by menu category</span>
+                <select id="menu-category">
+                  <option value="all">All menu categories</option>
+                  <option value="Eggless Breakfast">Eggless Breakfast</option>
+                  <option value="Egg-Cellent Breakfast">Egg-Cellent Breakfast</option>
+                  <option value="Nutritious Menu">Nutritious Menu</option>
+                  <option value="Lunch Menu">Lunch Menu</option>
+                </select>
+              </label>
+            </div>
+            <p class="allergen-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 10v6M12 7.2v.1" /></svg>
+              Food-literacy content does not replace Shelly's approved allergen information. Check the current menu for wheat/gluten, milk/dairy, egg, fish, soy and chicken designations.
+            </p>
+            <div class="inventory-table-wrap">
+              <table>
+                <thead><tr><th>#</th><th>Menu item</th><th>Menu category</th><th>Food story</th></tr></thead>
+                <tbody id="menu-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-comics" data-view-panel="comics" hidden>
+        <div class="comic-page-hero">
+          <div class="section-wrap comic-page-hero-inner">
+            <div>
+              <p class="eyebrow eyebrow-light"><span></span> The food time machine</p>
+              <h1>Real stories.<br /><em>Big adventures.</em></h1>
+              <p>Jump into six moments from food history. Every chapter is based on published research — and every uncertain origin stays uncertain.</p>
+              <div class="comic-hero-badges"><span>6 true-story chapters</span><span>Kid-friendly</span><span>Source checked</span></div>
+            </div>
+            <div class="time-machine-dial" aria-hidden="true">
+              <span>PAST</span><i></i><b>NOW</b>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-wrap comic-strip-section">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Four stops through time</p>
+              <h2>Can you spot what changed?</h2>
+            </div>
+            <p class="section-side-note">Illustrated scenes · captions below</p>
+          </div>
+          <figure class="history-comic-figure">
+            <img src="assets/food-history-comic.png" alt="Four illustrated food-history scenes: a Roman cook preparing soaked bread, a fur-trade camp cooking bannock, a 1920s Tijuana restaurant making Caesar salad, and a 1950s Québec snack counter serving poutine" />
+            <figcaption class="comic-captions">
+              <button data-comic="roman-toast"><span>01 · Roman era</span><strong>Bread gets a second chance</strong></button>
+              <button data-comic="bannock-trails"><span>02 · 1800s</span><strong>Flour travels the trade routes</strong></button>
+              <button data-comic="caesar-tijuana"><span>03 · 1920s</span><strong>A salad crosses borders</strong></button>
+              <button data-comic="poutine-quebec"><span>04 · Late 1950s</span><strong>A Québec snack-bar favourite</strong></button>
+            </figcaption>
+          </figure>
+          <p class="art-disclaimer"><span>🎨</span> Artwork is an educational illustration, not archival evidence or a photograph of Shelly's food.</p>
+        </section>
+
+        <section class="comic-reader-section">
+          <div class="section-wrap">
+            <div class="section-heading comic-reader-heading">
+              <div>
+                <p class="kicker kicker-light">Choose a time portal</p>
+                <h2>Open a story chapter</h2>
+              </div>
+              <div class="passport-score" aria-live="polite"><span>My story stamps</span><strong id="stamp-score">0 / 6</strong></div>
+            </div>
+            <div class="comic-reader">
+              <div class="comic-chapter-list" id="comic-chapter-list" role="tablist" aria-label="Food-history chapters"></div>
+              <article class="comic-chapter" id="comic-chapter" aria-live="polite"></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-wrap story-detective-section">
+          <div class="detective-card">
+            <span class="detective-badge" aria-hidden="true">?</span>
+            <div>
+              <p class="kicker">Story detective rule</p>
+              <h2>A great food historian says “we don't know” when the evidence is incomplete.</h2>
+              <p>Some origin stories have strong records. Others have several competing memories. Spot the <strong>debated</strong> badge and look for clues instead of forcing one answer.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-journeys" data-view-panel="journeys" hidden>
+        <div class="journey-hero">
+          <div class="section-wrap journey-hero-inner">
+            <div>
+              <p class="eyebrow eyebrow-light"><span></span> Ingredient origins</p>
+              <h1>Where did my lunch begin?</h1>
+              <p>Choose an ingredient and follow it from land, farm or water to the school table.</p>
+            </div>
+            <div class="journey-scribble" aria-hidden="true">
+              <svg viewBox="0 0 180 105"><path d="M9 78c35-51 75-68 134-52M130 12l18 13-11 19" /><circle cx="35" cy="75" r="14" /><path d="M29 74h12M35 68v12" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-wrap journey-workspace">
+          <div class="ingredient-picker" id="ingredient-picker" role="tablist" aria-label="Ingredients"></div>
+          <article class="journey-card" id="journey-card" aria-live="polite"></article>
+        </div>
+
+        <section class="section-wrap many-cultures-section">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">One ingredient, many cultures</p>
+              <h2>The same ingredient can tell many food stories.</h2>
+            </div>
+          </div>
+          <div class="many-cultures-card">
+            <div class="ingredient-spotlight">
+              <span class="ingredient-big-icon">🌾</span>
+              <p>One wheat field</p>
+              <strong>Many foods</strong>
+            </div>
+            <div class="food-chain-list" aria-label="Foods made with wheat">
+              <span>Bannock</span><i>→</i><span>Toast</span><i>→</i><span>Pancakes</span><i>→</i><span>Pasta</span><i>→</i><span>Burger bun</span>
+            </div>
+            <p class="many-cultures-lesson"><strong>Key lesson:</strong> ingredient origin is not the same as dish origin.</p>
+          </div>
+        </section>
+
+        <section class="map-section">
+          <div class="section-wrap">
+            <div class="section-heading map-heading">
+              <div>
+                <p class="kicker kicker-light">World food map</p>
+                <h2>Recipes move. Stories connect.</h2>
+              </div>
+              <p>Select a marker to open its food story.</p>
+            </div>
+            <div class="map-shell" id="food-map">
+              <svg class="world-map" viewBox="0 0 1000 480" role="img" aria-label="Stylized world map showing selected food-story connections">
+                <g class="continents">
+                  <path d="M86 126 160 73l86 10 42 35 66 16 30 44-35 21-11 42-40-1-23 47-45-11-31-52-67-27-50-34Z" />
+                  <path d="m298 294 55 22 22 44-18 72-37 26-22-78-27-47Z" />
+                  <path d="m470 132 62-45 81 13 39 29 70-7 55 29 86-14 83 50-48 41-85-3-48 25-55-17-28 21-29-23-50 5-40-30-67 4-39-35Z" />
+                  <path d="m557 242 87 6 49 56-9 95-49 48-49-41-15-72-42-42Z" />
+                  <path d="m833 348 62-13 42 35-26 43-62-11-29-29Z" />
+                </g>
+              </svg>
+              <button class="map-pin pin-manitoba" data-story="oatmeal"><span></span><b>Manitoba</b><small>Oats · wheat · potatoes</small></button>
+              <button class="map-pin pin-indigenous" data-story="bannock"><span></span><b>Indigenous Canada</b><small>Bannock food story</small></button>
+              <button class="map-pin pin-quebec" data-story="poutine"><span></span><b>Québec</b><small>Poutine</small></button>
+              <button class="map-pin pin-mexico" data-story="caesar"><span></span><b>Mexico</b><small>Caesar salad · taco traditions</small></button>
+              <button class="map-pin pin-italy" data-story="alfredo"><span></span><b>Italy</b><small>Frittata · Alfredo · pasta</small></button>
+              <div class="map-route route-one"></div>
+              <div class="map-route route-two"></div>
+              <p class="map-note">Connections show origin, migration and adaptation — not ownership by one place.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-teachers" data-view-panel="teachers" hidden>
+        <div class="page-intro section-wrap teacher-intro">
+          <p class="eyebrow"><span></span> A two-minute classroom activity</p>
+          <h1>Teacher toolkit</h1>
+          <p>Choose a food story and reading level. The dashboard builds a simple before, during and after prompt set.</p>
+        </div>
+
+        <section class="section-wrap prompt-builder-section">
+          <div class="builder-controls">
+            <div>
+              <label for="teacher-story">Today's food story</label>
+              <select id="teacher-story"></select>
+            </div>
+            <div>
+              <label for="teacher-grade">Student level</label>
+              <select id="teacher-grade">
+                <option value="1">Kindergarten–Grade 3</option>
+                <option value="2" selected>Grades 4–6</option>
+                <option value="3">Grades 7–12</option>
+              </select>
+            </div>
+            <button class="button button-primary" id="copy-prompts">Copy prompts</button>
+          </div>
+
+          <article class="lesson-card" id="lesson-card" aria-live="polite">
+            <div class="lesson-header">
+              <div>
+                <span class="lesson-label">Today's mini lesson</span>
+                <h2 id="lesson-title"></h2>
+              </div>
+              <span class="lesson-time">2–5 min</span>
+            </div>
+            <div class="lesson-steps" id="lesson-steps"></div>
+            <div class="lesson-footer">
+              <p id="lesson-fact"></p>
+              <button class="icon-button" id="print-lesson" title="Print this lesson" aria-label="Print this lesson">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-3M7 14h10v7H7z" /></svg>
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-wrap discussion-section">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Use with any meal</p>
+              <h2>Discussion card deck</h2>
+            </div>
+            <div class="deck-controls">
+              <button class="icon-button" id="deck-prev" aria-label="Previous discussion card">←</button>
+              <span id="deck-count">1 / 7</span>
+              <button class="icon-button" id="deck-next" aria-label="Next discussion card">→</button>
+            </div>
+          </div>
+          <div class="discussion-deck" id="discussion-deck"></div>
+        </section>
+
+        <section class="section-wrap inclusivity-note">
+          <span class="inclusivity-icon" aria-hidden="true">♡</span>
+          <div>
+            <p class="kicker">Inclusive facilitation</p>
+            <h2>Invite curiosity, not comparison.</h2>
+            <p>
+              Ask what students notice and wonder. Avoid asking children to disclose personal cultural,
+              immigration or socioeconomic information. A food can be familiar, new or a little familiar — never “weird.”
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-plan" data-view-panel="plan" hidden>
+        <div class="page-intro section-wrap plan-intro">
+          <p class="eyebrow"><span></span> Practical rollout</p>
+          <h1>The recommended school package</h1>
+          <p>One research system, reused across the touchpoints schools will actually use.</p>
+        </div>
+
+        <section class="section-wrap package-section">
+          <div class="package-tabs" id="package-tabs" role="tablist" aria-label="Recommended package layers">
+            <button class="active" data-package="essential"><span>01</span>Essential</button>
+            <button data-package="enhanced"><span>02</span>Enhanced</button>
+            <button data-package="digital"><span>03</span>Digital</button>
+            <button data-package="teacher"><span>04</span>Teacher</button>
+            <button data-package="cultural"><span>05</span>Cultural features</button>
+          </div>
+          <article class="package-detail" id="package-detail"></article>
+        </section>
+
+        <section class="section-wrap deliverables-section">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Reusable content system</p>
+              <h2>25 deliverables, one source of truth</h2>
+            </div>
+            <div class="progress-pill"><span>Concept coverage</span><strong>25 / 25</strong></div>
+          </div>
+          <div class="deliverables-grid" id="deliverables-grid"></div>
+        </section>
+
+        <section class="section-wrap review-section">
+          <div class="review-copy">
+            <p class="kicker">Cultural review built in</p>
+            <h2>Accuracy before simplicity.</h2>
+            <p>Stories are labelled by evidence and uncertainty. Shelly's version stays separate from historical or traditional versions.</p>
+          </div>
+          <div class="review-checklist">
+            <div><span>✓</span><p><strong>No false country labels</strong><small>Multiple influences stay visible.</small></p></div>
+            <div><span>✓</span><p><strong>Living Indigenous foodways</strong><small>No generic or decorative claims.</small></p></div>
+            <div><span>✓</span><p><strong>Uncertainty is named</strong><small>Debated origins stay debated.</small></p></div>
+            <div><span>✓</span><p><strong>Recipe distinction</strong><small>Traditional ≠ contemporary ≠ Shelly's.</small></p></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <aside class="story-drawer" id="story-drawer" aria-hidden="true" aria-labelledby="drawer-title">
+      <div class="drawer-backdrop" data-close-drawer></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true">
+        <button class="drawer-close" data-close-drawer aria-label="Close food story">×</button>
+        <div id="drawer-content"></div>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 44 44"><path d="M22 5c2.3 5.8 1.2 10.2-3.3 13.1C13 17.2 9 14.7 7 10.5c6.4-.6 11.4 1.2 15 5.5" /><path d="M22 5c-2.3 5.8-1.2 10.2 3.3 13.1C31 17.2 35 14.7 37 10.5c-6.4-.6-11.4 1.2-15 5.5" /><path d="M22 39c-1-9.5-.4-16.5 0-23" /></svg>
+          </span>
+          <span><strong>Shelly's Food Stories</strong><small>Food · Culture · Land · Community</small></span>
+        </div>
+        <p>Educational concept dashboard for the St. James-Assiniboia School Division Universal Nutrition Program.</p>
+        <p class="footer-note">Content must be reviewed against the current approved menu before publication.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
