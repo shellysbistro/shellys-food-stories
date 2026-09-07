@@ -11,9 +11,10 @@ No package installation or build step is required.
 ## Included
 
 - 45-item source menu inventory
-- 16 grouped food stories
+- 45 individual, menu-specific food stories — including separate chapters for every soup and salad
 - Six source-linked, interactive food-history comic chapters
-- A named storybook food character and speech-bubble clue for every one of the 16 story groups
+- A named storybook food character and speech-bubble clue for every menu story
+- A prominent five-stop field, farm or water-to-school traceability trail for every item
 - Original food-character cast sheets and four-panel history illustrations
 - Clue challenges, story stamps and saved passport progress
 - K–3, Grades 4–6 and Grades 7–12 reading levels
@@ -27,7 +28,7 @@ No package installation or build step is required.
 
 ## Content note
 
-This is an educational concept based on the supplied Shelly's Food Stories brief. Before public release, item ingredients and allergen designations must be checked against the current approved Shelly's menu. Historical source labels should also be converted into a final reviewed citation register with publication-ready links.
+This is an educational concept based on the supplied Shelly's Food Stories brief. Item ingredients and allergen designations must be checked against the current approved Shelly's menu. The traceability trails explain likely food-system routes; actual farms, processors, countries of origin, supplier names and lot codes must be verified from Shelly's receiving and preparation records.
 
 The comic chapters currently link to source material from Parks Canada, the Louis Riel Institute/Virtual Museum of Métis History and Culture, Smithsonian, Turismo Roma and Université Laval's IREPI.
 

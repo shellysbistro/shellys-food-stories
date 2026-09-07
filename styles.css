@@ -1094,7 +1094,7 @@ svg {
 .story-card {
   position: relative;
   display: flex;
-  min-height: 545px;
+  min-height: 675px;
   flex-direction: column;
   padding: 30px;
   overflow: hidden;
@@ -1247,6 +1247,66 @@ svg {
 
 .story-card-region strong {
   font-size: 0.84rem;
+}
+
+.story-trace-preview {
+  display: grid;
+  gap: 10px;
+  margin: -7px 0 22px;
+  padding: 14px 13px 12px;
+  color: var(--pine);
+  background: color-mix(in srgb, var(--card-accent) 10%, #f8f3e7);
+  border: 1px solid color-mix(in srgb, var(--card-accent) 22%, var(--line));
+  border-radius: 5px;
+}
+
+.story-trace-preview > strong {
+  font-size: 0.61rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.story-trace-route {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.story-trace-route > span {
+  display: grid;
+  min-width: 0;
+  flex: 1 1 0;
+  justify-items: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.story-trace-route i {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  font-style: normal;
+  font-size: 0.92rem;
+}
+
+.story-trace-route small {
+  color: var(--muted);
+  font-size: 0.51rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.story-trace-route b {
+  padding-top: 6px;
+  color: color-mix(in srgb, var(--card-accent) 72%, var(--pine));
+  font-size: 0.72rem;
 }
 
 .story-card h3 {
@@ -3084,6 +3144,96 @@ tbody tr:hover {
   line-height: 1.45;
 }
 
+.drawer-traceability {
+  margin-bottom: 34px;
+  padding: 27px 26px 23px;
+  color: var(--pine);
+  background:
+    radial-gradient(circle at 100% 0, color-mix(in srgb, var(--drawer-colour) 22%, transparent), transparent 34%),
+    #eff3e7;
+  border: 1px solid color-mix(in srgb, var(--drawer-colour) 34%, var(--line));
+  border-radius: 7px;
+}
+
+.drawer-trace-heading > span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--berry);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.drawer-trace-heading h3 {
+  margin-bottom: 6px;
+  font-size: 1.55rem;
+}
+
+.drawer-trace-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.traceability-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.traceability-step {
+  position: relative;
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 6px;
+  min-height: 154px;
+  padding: 13px 10px;
+  background: rgba(255, 255, 255, 0.82);
+  border-top: 3px solid color-mix(in srgb, var(--drawer-colour) 68%, var(--pine));
+}
+
+.trace-step-number {
+  color: var(--berry);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+.trace-step-icon {
+  font-size: 1.45rem;
+}
+
+.traceability-step strong {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.traceability-step small {
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.35;
+}
+
+.traceability-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-top: 14px;
+  color: #53635c;
+  border-top: 1px solid rgba(23, 63, 53, 0.14);
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
+.traceability-note span {
+  color: var(--berry);
+  font-weight: 800;
+}
+
 .drawer-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3130,6 +3280,27 @@ tbody tr:hover {
 
 .drawer-section p {
   color: #53635c;
+}
+
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.source-links a {
+  padding: 8px 10px;
+  color: var(--pine);
+  background: #f4ead6;
+  border: 1px solid var(--line);
+  font-size: 0.7rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.source-links a:hover {
+  color: var(--berry);
+  border-color: var(--berry);
 }
 
 .shellys-version {
@@ -3841,7 +4012,7 @@ footer {
   }
 
   .story-card {
-    min-height: 515px;
+    min-height: 645px;
     padding: 25px;
   }
 
@@ -3886,6 +4057,25 @@ footer {
 
   .drawer-meta {
     grid-template-columns: 1fr;
+  }
+
+  .drawer-traceability {
+    padding: 22px 18px;
+  }
+
+  .traceability-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .traceability-step {
+    grid-template-columns: 34px 34px minmax(70px, .65fr) minmax(0, 1fr);
+    align-items: center;
+    min-height: 0;
+    padding: 11px 10px;
+  }
+
+  .traceability-step small {
+    font-size: 0.68rem;
   }
 
   .footer-inner {
