@@ -677,18 +677,16 @@ svg {
 .drawer-character {
   display: block;
   flex: 0 0 auto;
-  background-image: var(--character-image);
-  background-repeat: no-repeat;
-  background-position: var(--character-x) var(--character-y);
-  background-size: 400% 200%;
+  object-fit: cover;
+  object-position: center;
   border: 3px solid rgba(255, 255, 255, 0.68);
   border-radius: 24px;
   box-shadow: 0 10px 24px rgba(60, 35, 17, 0.14);
 }
 
 .featured-character {
-  width: 118px;
-  height: 158px;
+  width: 138px;
+  aspect-ratio: 1;
   margin-bottom: auto;
   filter: drop-shadow(0 11px 12px rgba(0, 0, 0, 0.18));
 }
@@ -1141,7 +1139,7 @@ svg {
 .story-card-scene {
   position: relative;
   display: grid;
-  grid-template-columns: 122px minmax(0, 1fr);
+  grid-template-columns: 148px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
   min-height: 198px;
@@ -1169,8 +1167,8 @@ svg {
   position: relative;
   z-index: 1;
   align-self: end;
-  width: 118px;
-  height: 170px;
+  width: 144px;
+  aspect-ratio: 1;
   filter: drop-shadow(0 10px 9px rgba(60, 35, 17, 0.18));
   transform-origin: 50% 100%;
   transition: transform 220ms cubic-bezier(.2, .8, .2, 1);
@@ -3067,7 +3065,7 @@ tbody tr:hover {
 .drawer-storybook {
   position: relative;
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-columns: 220px minmax(0, 1fr);
   align-items: center;
   gap: 20px;
   min-height: 250px;
@@ -3092,8 +3090,8 @@ tbody tr:hover {
 
 .drawer-character {
   align-self: end;
-  width: 180px;
-  height: 235px;
+  width: 210px;
+  aspect-ratio: 1;
   filter: drop-shadow(0 12px 12px rgba(60, 35, 17, 0.2));
 }
 
@@ -4014,7 +4012,7 @@ footer {
 
   .story-character {
     width: 112px;
-    height: 165px;
+    aspect-ratio: 1;
   }
 
   .story-card-bubble {
@@ -4030,7 +4028,7 @@ footer {
 
   .drawer-character {
     width: 116px;
-    height: 178px;
+    aspect-ratio: 1;
   }
 
   .drawer-speech {

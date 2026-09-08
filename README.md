@@ -13,9 +13,10 @@ No package installation or build step is required.
 - 45-item source menu inventory
 - 45 individual, menu-specific food stories — including separate chapters for every soup and salad
 - Six source-linked, interactive food-history comic chapters
-- A named storybook food character and speech-bubble clue for every menu story
+- 45 unique, menu-specific storybook food images — one generated and visually checked for every named item
+- 45 unique, menu-specific food character images with matching speech-bubble clues
 - A prominent five-stop field, farm or water-to-school traceability trail for every item
-- Original food-character cast sheets and four-panel history illustrations
+- Original food-character illustrations and four-panel history illustrations
 - Clue challenges, story stamps and saved passport progress
 - K–3, Grades 4–6 and Grades 7–12 reading levels
 - Search and cultural/geographic filters

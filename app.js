@@ -433,6 +433,58 @@ const menuItems = [
   [45, "Cheese Ravioli", "Lunch Menu", "pasta"]
 ];
 
+const foodImageFiles = [
+  "01-oatmeal.jpg",
+  "02-side-of-fruit.jpg",
+  "03-meat-breakfast-box.jpg",
+  "04-breakfast-bannock-meat-box.jpg",
+  "05-breakfast-sandwich-eggless.jpg",
+  "06-pancakes-eggless.jpg",
+  "07-waffle-sandwich.jpg",
+  "08-pancake-sandwich.jpg",
+  "09-english-muffin-sandwich-eggless.jpg",
+  "10-breakfast-box.jpg",
+  "11-breakfast-bannock-box.jpg",
+  "12-french-toast-sausage.jpg",
+  "13-pancakes-three.jpg",
+  "14-pancakes-with-sausage.jpg",
+  "15-whole-wheat-breakfast-wrap.jpg",
+  "16-frittata.jpg",
+  "17-english-muffin-breakfast-sandwich.jpg",
+  "18-tuna-sandwich.jpg",
+  "19-chicken-wrap.jpg",
+  "20-chicken-caesar-wrap.jpg",
+  "21-garden-salad.jpg",
+  "22-caesar-salad.jpg",
+  "23-grilled-cheese-sandwich.jpg",
+  "24-sandwich.jpg",
+  "25-fries.jpg",
+  "26-tomato-soup.jpg",
+  "27-veggie-soup.jpg",
+  "28-hamburger-soup.jpg",
+  "29-chicken-noodle-soup.jpg",
+  "30-carrot-soup.jpg",
+  "31-stew-with-bannock.jpg",
+  "32-tomato-alphabet-soup.jpg",
+  "33-chicken-fingers.jpg",
+  "34-chicken-burger.jpg",
+  "35-cheeseburger.jpg",
+  "36-poutine.jpg",
+  "37-chicken-wings.jpg",
+  "38-mac-and-cheese-with-garlic-toast.jpg",
+  "39-spaghetti-with-meat-sauce.jpg",
+  "40-veggie-spaghetti-with-garlic-toast.jpg",
+  "41-chicken-alfredo-with-garlic-toast.jpg",
+  "42-taco-beef-bowl.jpg",
+  "43-crispy-chicken-burger.jpg",
+  "44-chicken-parmesan-veggie-pasta.jpg",
+  "45-cheese-ravioli.jpg"
+];
+
+if (foodImageFiles.length !== menuItems.length || new Set(foodImageFiles).size !== menuItems.length) {
+  throw new Error("Each menu story must have one unique food image.");
+}
+
 const sourceCatalog = {
   cfiaTrace: { label: "CFIA — Traceability for food businesses", url: "https://inspection.canada.ca/en/food-safety-industry/toolkit-food-businesses/traceability" },
   mbCrops: { label: "Manitoba Agriculture — Crops", url: "https://www.gov.mb.ca/agriculture/crops/" },
@@ -528,7 +580,12 @@ const stories = menuItems.map(([number, name, category, themeId]) => {
     category,
     kicker: profile.kicker,
     icon: profile.icon || theme.icon,
-    character: { ...theme.character, name: profile.character, speech: profile.speech },
+    character: {
+      ...theme.character,
+      name: profile.character,
+      speech: profile.speech,
+      image: `assets/food-items/${foodImageFiles[number - 1]}`
+    },
     region: profile.region || theme.region,
     connection: profile.connection || theme.connection,
     confidence: profile.confidence || theme.confidence,
@@ -793,11 +850,7 @@ function gradeLabel(grade) {
 }
 
 function characterPortrait(story, className = "story-character") {
-  const xPositions = [0, 33.333, 66.667, 100];
-  const x = xPositions[story.character.x] ?? 0;
-  const y = story.character.y === 1 ? 100 : 0;
-  const style = `--character-image:url('assets/${story.character.sheet}');--character-x:${x}%;--character-y:${y}%`;
-  return `<span class="${className}" role="img" aria-label="${escapeHtml(story.character.name)}, ${escapeHtml(story.title)} storybook character" style="${style}"></span>`;
+  return `<img class="${className}" src="${escapeHtml(story.character.image)}" alt="${escapeHtml(story.character.name)}, a storybook ${escapeHtml(story.title)} character" loading="lazy" decoding="async">`;
 }
 
 function renderFeaturedStories() {
